@@ -1,7 +1,9 @@
 {
   "manifest_version":2,
   "name":"Bible Extension",
+  "description":"Search the Bible while you browse",
   "version":"0.1",
+  "author":"MasterOfTheTiger",
   "browser_action": {
     "default_popup":"popup.html"
   }

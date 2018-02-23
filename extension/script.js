@@ -1,27 +1,24 @@
 function getVerses(url) {
-  $.ajax({
-    url: url,
-    success: function(result){
-    //$("#reqObject").text(url);
-    //$("#returnObject").text(JSON.stringify(result, null, 4));
-    $("#demo").text(result.verses[0].text);
-  }
+  fetch(url)
+  .then(response => response.json())
+  .then(result => {
+    document.getElementById('demo').innerHTML = result.verses[0].text;
+    console.log(result);
   });
 }
 
 function start() {
   input = document.getElementById('search').value;
-  urll = "https://api.lsm.org/recver.php?String=" + input + '&In=osis&Out=json';
+  urll = "https://api.lsm.org/recver.php?String=" + input + '\&Out=json';
   console.log(urll);
   getVerses(urll);
 }
 
-var url = "https://api.lsm.org/recver.php?String='John 1:1'&Out=json";
+var url = "https://api.lsm.org/recver.php?String=\'John 1:1\'\&Out=json";
+getVerses(url);
 
-$(document).ready(function(){
-   $('body').on('click', 'button', function(){
-     getVerses();
-   });
+$('body').on('click', 'button', function(){
+  start();
 });
 
 button.addEventListener('click', start());

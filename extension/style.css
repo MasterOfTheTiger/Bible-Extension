@@ -1,11 +1,18 @@
 body {
-  max-width: 400px;
+  width: 400px;
 }
 input {
   width: 60%;
   display: inline;
 }
-button {
+#button {
   display: inline;
   text-align: center;
+  width: 30%;
+}
+#scripture {
+
+}
+#translation {
+  width: 96%;
 }

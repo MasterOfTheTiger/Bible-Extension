@@ -1,10 +1,6 @@
 body {
   width: 400px;
 }
-input {
-  width: 60%;
-  display: inline;
-}
 #button {
   display: inline;
   text-align: center;
@@ -15,4 +11,42 @@ input {
 }
 #translation {
   width: 96%;
+}
+#button {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  padding: 6px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #efefef;
+  font-size: 13px;
+  font-family: arial;
+  border-width: thin;
+}
+#button:hover {
+  background-color: #d8d8d8;
+  cursor: default;
+}
+#button:active {
+  background-color: lightblue;
+  border-color: lightblue
+}
+#search {
+  border-radius: 3px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  padding: 7px;
+  padding-right: 2px;
+  padding-left: 2px;
+  font-size: 13px;
+  font-family: arial;
+  border-width: thin;
+  font-size: 12px;
+  text-align: center;
+  width: 60%;
+  display: inline;
+}
+.margin-top {
+  margin-top: 10px;
 }

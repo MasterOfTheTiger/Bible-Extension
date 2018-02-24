@@ -1,20 +1,20 @@
 function getVerses(url) {
   fetch(url)
-  .then(response => response.json())
+  .then(response => response.text())
   .then(result => {
-    document.getElementById('demo').innerHTML = result.verses[0].text;
+    document.getElementById('scripture').innerHTML = result;
     console.log(result);
   });
 }
 
 function start() {
   input = document.getElementById('search').value;
-  urll = "https://api.lsm.org/recver.php?String=" + input + '\&Out=json';
+  urll = "http://api.biblia.com/v1/bible/content/LEB.txt.txt?passage=" + input +  "&callback=myCallbackFunction&key=b4e7aedb44e6c74f4327182f0a244da1";
   console.log(urll);
   getVerses(urll);
 }
 
-var url = "https://api.lsm.org/recver.php?String=\'John 1:1\'\&Out=json";
+var url = "http://api.biblia.com/v1/bible/content/LEB.txt.txt?passage=John3.16&callback=myCallbackFunction&key=b4e7aedb44e6c74f4327182f0a244da1";
 getVerses(url);
 
 $('body').on('click', 'button', function(){

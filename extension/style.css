@@ -9,6 +9,10 @@ body {
 #scripture {
 
 }
+#error {
+  display: none;
+  color: red;
+}
 #translation {
   width: 96%;
 }
@@ -29,8 +33,8 @@ body {
   cursor: default;
 }
 #button:active {
-  background-color: lightblue;
-  border-color: lightblue
+  background-color: orange;
+  border-color: orange;
 }
 #search {
   border-radius: 3px;
@@ -38,14 +42,16 @@ body {
   border-color: #d8d8d8;
   padding: 7px;
   padding-right: 2px;
-  padding-left: 2px;
+  padding-left: 4px;
   font-size: 13px;
   font-family: arial;
   border-width: thin;
   font-size: 12px;
-  text-align: center;
   width: 60%;
   display: inline;
+}
+#search:focus {
+  border-color: orange;
 }
 .margin-top {
   margin-top: 10px;

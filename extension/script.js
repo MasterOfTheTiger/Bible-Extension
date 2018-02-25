@@ -3,12 +3,23 @@ function getVerses(reference, version) {
   fetch(url)
   .then(response => response.text())
   .then(result => {
-    document.getElementById('scripture').innerHTML = result;
-    document.getElementById('reference').innerHTML = reference;
+    if (result != '') {
+      document.getElementById('scripture').innerHTML = result;
+      document.getElementById('reference').innerHTML = reference;
+      document.getElementById('error').style.display = 'none';
+    }else {
+      document.getElementById('error').style.display = 'block';
+      document.getElementById('error').innerHTML = 'It looks like there is a problem with your query.';
+    }
     return result;
   });
 }
-
+if (!navigator.onLine) {
+  document.getElementById('error').style.display = 'block';
+  document.getElementById('error').innerHTML = 'Check your internet connection';
+}else {
+  document.getElementById('error').style.display = 'none';
+}
 function start() {
   var version = document.getElementById('translation').value;
   input = document.getElementById('search').value;
@@ -34,6 +45,6 @@ var references =
 var random = Math.floor((Math.random() * references.length-1 ) + 1);
 random = references[random];
 var url = "http://api.biblia.com/v1/bible/content/KJV.txt?passage=" + random + "&callback=myCallbackFunction&key=b4e7aedb44e6c74f4327182f0a244da1";
-getVerses(url, random);
+getVerses(random, 'kjv');
 
 document.getElementById("button").addEventListener("click", start);

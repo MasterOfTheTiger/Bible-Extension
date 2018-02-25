@@ -45,7 +45,7 @@ var references =
        "John 3.16-17",
        "Hebrews 12.1-2",
        "Genesis 1.1",
-       "Peter 1.16"
+       "1 Peter 1.16"
       ];
 var random = Math.floor((Math.random() * references.length-1 ) + 1);
 random = references[random];

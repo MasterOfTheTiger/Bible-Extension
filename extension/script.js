@@ -11,6 +11,7 @@ function getVerses(reference, version) {
     }else {
       document.getElementById('error').style.display = 'block';
       document.getElementById('error').innerHTML = 'It looks like there is a problem with your query.';
+      setTimeout(function(){document.getElementById('error').style.display = "none"}, 5000);
     }
     document.getElementById('result').display = 'block';
     return result;
@@ -28,7 +29,7 @@ input = document.getElementById('search').value;
     var version = document.getElementById('translation').value;
     urll = "http://api.biblia.com/v1/bible/content/KJV.txt?passage=" + input +  "&callback=myCallbackFunction&key=b4e7aedb44e6c74f4327182f0a244da1";
     getVerses(input, version);
-  }  
+  }
 }
 var references =
       ["1 Thessalonians 5.16",

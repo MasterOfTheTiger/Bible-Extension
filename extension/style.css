@@ -1,18 +1,34 @@
 body {
   width: 400px;
   font-family: arial;
+  overflow-x: hidden;
 }
 #button {
   display: inline;
   text-align: center;
   width: 30%;
 }
+#result {
+  border-style: solid;
+  border-color: orange;
+  border-width: thin;
+  margin-top: 10px;
+  padding: 10px;
+  width: 92%;
+}
 #scripture {
-
+  padding: 0;
+  margin: 0;
 }
 #error {
   display: none;
-  color: red;
+  color: white;
+  background-color: red;
+  padding: 5px;
+}
+#reference {
+  font-size: 110%;
+  margin-bottom: 10px; !important
 }
 #translation {
   width: 96%;

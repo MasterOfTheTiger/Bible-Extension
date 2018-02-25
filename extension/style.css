@@ -1,5 +1,6 @@
 body {
   width: 400px;
+  font-family: arial;
 }
 #button {
   display: inline;
@@ -15,6 +16,12 @@ body {
 }
 #translation {
   width: 96%;
+  border-color: #d8d8d8;
+  background-color: #efefef;
+  border-style: solid;
+  border-width: thin;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 #button {
   border-radius: 5px;

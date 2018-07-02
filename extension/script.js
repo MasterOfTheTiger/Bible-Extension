@@ -32,20 +32,20 @@ input = document.getElementById('search').value;
   }
 }
 var references =
-      ["1 Thessalonians 5.16",
-       "1 Thessalonians 5.19",
-       "1 Thessalonians 5.20",
-       "1 Thessalonians 5.21",
-       "1 Thessalonians 5.22",
-       "1 Peter 4.7",
-       "3 John 1.4",
-       "Proverbs 6.6",
-       "Psalms 8.9",
-       "Revelation 17.11",
-       "John 3.16-17",
-       "Hebrews 12.1-2",
-       "Genesis 1.1",
-       "1 Peter 1.16"
+      ["1 Thessalonians 5:16",
+       "1 Thessalonians 5:19",
+       "1 Thessalonians 5:20",
+       "1 Thessalonians 5:21",
+       "1 Thessalonians 5:22",
+       "1 Peter 4:7",
+       "3 John 1:4",
+       "Proverbs 6:6",
+       "Psalms 8:9",
+       "Revelation 17:11",
+       "John 3:16-17",
+       "Hebrews 4:12",
+       "Genesis 1:1",
+       "1 Peter 1:16"
       ];
 var random = Math.floor((Math.random() * references.length-1 ) + 1);
 random = references[random];

@@ -2,7 +2,7 @@
   "manifest_version":2,
   "name":"Heb12 Bible Extension",
   "description":"Search the Bible while you browse",
-  "version":"0.1",
+  "version":"0.2",
   "author":"Heb12",
   "browser_action": {
     "default_icon": "icon.png",

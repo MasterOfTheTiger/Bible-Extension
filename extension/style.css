@@ -10,7 +10,7 @@ body {
 }
 #result {
   border-style: solid;
-  border-color: orange;
+  border-color: lightblue;
   border-width: thin;
   margin-top: 10px;
   padding: 10px;
@@ -55,8 +55,8 @@ body {
   cursor: default;
 }
 #button:active {
-  background-color: orange;
-  border-color: orange;
+  background-color: lightblue;
+  border-color: lightblue;
 }
 #search {
   border-radius: 3px;
@@ -73,7 +73,7 @@ body {
   display: inline;
 }
 #search:focus {
-  border-color: orange;
+  border-color: lightblue;
 }
 .margin-top {
   margin-top: 10px;

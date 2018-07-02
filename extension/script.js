@@ -5,12 +5,12 @@ function getVerses(reference, version) {
   .then(response => response.text())
   .then(result => {
     if (result != '') {
-      document.getElementById('scripture').innerHTML = result;
-      document.getElementById('reference').innerHTML = reference;
+      document.getElementById('scripture').innerText = result;
+      document.getElementById('reference').innerText = reference;
       document.getElementById('error').style.display = 'none';
     }else {
       document.getElementById('error').style.display = 'block';
-      document.getElementById('error').innerHTML = 'It looks like there is a problem with your query.';
+      document.getElementById('error').innerText = 'It looks like there is a problem with your query.';
       setTimeout(function(){document.getElementById('error').style.display = "none"}, 5000);
     }
     document.getElementById('result').display = 'block';
@@ -19,7 +19,7 @@ function getVerses(reference, version) {
 }
 if (!navigator.onLine) {
   document.getElementById('error').style.display = 'block';
-  document.getElementById('error').innerHTML = 'Check your internet connection';
+  document.getElementById('error').innerText = 'Check your internet connection';
 }else {
   document.getElementById('error').style.display = 'none';
 }
